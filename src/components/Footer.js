@@ -42,13 +42,13 @@ const Footer = () => {
               <h4 className="text-white mb-4">Contact Us</h4>
               <div>
                 <address className="text-white fs-6">
-                  Midrand: 277 Kayalami, <br />
-                  Gauteng <br /> 1632, <br />
+                  Barbeque Downs, <br />
+                  Gauteng, <br />
                   South Africa
                 </address>
                 <a
                   href="Tel:+27659682031"
-                  className="mt-3 d-block mb-1 text-white "
+                  className="mt-3 d-block mb-1 text-white"
                 >
                   +27659682031
                 </a>
