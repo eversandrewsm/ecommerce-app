@@ -3,7 +3,7 @@ import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import ReactStars from "react-rating-stars-component";
 import ProductCard from "../components/ProductCard";
-import Color from "./Color";
+import Color from "../components/Color";
 
 const OurStore = () => {
   const [grid, setGrid] = useState(4);
