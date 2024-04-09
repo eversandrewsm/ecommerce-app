@@ -14,7 +14,7 @@ const BlogCard = () => {
           The sun crept over the horizon, painting the sky with strokes of pink
           and gold, signaling the arrival of a...
         </p>
-        <Link to="/" className="button">
+        <Link to="/blog/:id" className="button">
           Read More
         </Link>
       </div>
