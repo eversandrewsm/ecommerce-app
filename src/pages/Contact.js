@@ -61,7 +61,9 @@ const Contact = () => {
                       ></textarea>
                     </div>
                     <div>
-                      <button className="button border-0">Submit</button>
+                      <button className="button border-0 py-2 px-4">
+                        Submit
+                      </button>
                     </div>
                   </form>
                 </div>
