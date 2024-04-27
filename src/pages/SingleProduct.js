@@ -11,16 +11,26 @@ import { RiHeartAddLine } from "react-icons/ri";
 const SingleProduct = () => {
   const props = {
     width: 400,
-    height: 500,
+    height: 600,
     zoomWidth: 600,
     img: "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw34d84041/images/Titan/Catalog/1698KM02_1.jpg?sw=800&sh=800",
   };
   const [orderedProduct, setorderedProduct] = useState(true);
+  const copyToClipboard = (text) => {
+    console.log("text", text);
+    var textField = document.createElement("textarea");
+    textField.innerText = text; // Corrected the variable name from Field to textField
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    textField.remove();
+  };
+
   return (
     <>
       <Meta title={"Product Name"} />
       <BreadCrumb title={"Product Name"} />
-      <div className="main-product-wrapper py-5 home-wrapper-2">
+      <div className="main-product-wrapper py-5 home-wrapper-2 py-1">
         <div className="container-xxl">
           <div className="row">
             <div className="col-6">
@@ -133,6 +143,7 @@ const SingleProduct = () => {
                         name=""
                         min={1}
                         max={10}
+                        defaultValue={1}
                         className="form-control"
                         style={{ width: "70px" }}
                         id=""
@@ -142,28 +153,46 @@ const SingleProduct = () => {
                       <button className="button border-0" type="submit">
                         Add to Cart
                       </button>
-                      <button className="button signup">But it Now</button>
+                      <button className="button signup">Buy it Now</button>
                     </div>
                   </div>
                   <div className="d-flex align-items-center gap-15">
                     <div>
-                      <a href="">
+                      <a href="" className="mb-0">
                         <IoGitCompareOutline className="fs-5 me-2" />
                         Add to Compare
                       </a>
                     </div>
                     <div>
-                      <a href="">
+                      <a href="" className="mb-0">
                         <RiHeartAddLine className="fs-5 me-2" />
                         Add to Wishlist
                       </a>
                     </div>
                   </div>
+                  <div className="d-flex gap-10 flex-column my-2">
+                    <h3 className="product-heading mt-2">Shipping & Returns</h3>
+                    <p className="product-data">
+                      Free shipping and returns available on all orders! <br />
+                      We ship all RSA domestic orders withing
+                      <strong>5-10 business days!</strong>
+                    </p>
+                  </div>
                   <div className="d-flex gap-10 align-items-center my-2">
-                    <h3 className="product-heading">Shipping & Returns</h3>
-                    <p className="product-data">Free shipping and returns available on all orders! <br />We ship all domestic products withing 48 hours.</p>
+                    <h3 className="product-heading">Product Link :</h3>
+                    <a
+                      href="javascript:void(0)"
+                      onClick={() =>
+                        copyToClipboard(
+                          "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw34d84041/images/Titan/Catalog/1698KM02_1.jpg?sw=800&sh=800"
+                        )
+                      }
+                    >
+                      Click to Copy Link.
+                    </a>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
