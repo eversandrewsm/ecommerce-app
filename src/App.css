@@ -695,6 +695,10 @@ footer .input-group-text {
   .cart-col-1 {
     width: 40%;
   }
+  .cart-col-1 p {
+    color: var(--color-777777);
+    font-size: 14px;
+  }
   .cart-col-2 {
     width: 10%;
   }
@@ -703,5 +707,8 @@ footer .input-group-text {
   }
   .cart-col-4 {
     width: 15%;
+  }
+  .cart-data h5{
+    font-size: 14px;
   }
   /* Cart Page */
