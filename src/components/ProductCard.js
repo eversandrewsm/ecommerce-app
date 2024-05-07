@@ -2,7 +2,6 @@ import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link, useLocation } from "react-router-dom";
 import prodcompare from "../images/prodcompare.svg";
-import wish from "../images/wish.svg";
 import wish1 from "../images/wishlist.png";
 import wishlist from "../images/wishlist.svg";
 import watch2 from "../images/watch-1.jpg";
@@ -23,17 +22,17 @@ const ProductCard = (props) => {
       >
         <Link to=":id" className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
-            <Link>
+            <button className="border-0 bg-transparent">
               <img
-                src={wishlist}
+                src={wish1}
                 alt="wishlist"
                 style={{ width: "18px", height: "18px" }}
               />
-            </Link>
+            </button>
           </div>
           <div className="product-image">
             <img src={watch} className="img-fluid" alt="product image" />
-            <img src="images/watch-1.jpg" alt="product image" />
+            <img src={watch2} alt="product image" />
           </div>
           <div className="product-details">
             <h6 className="brand">Havels</h6>
@@ -43,7 +42,7 @@ const ProductCard = (props) => {
             <ReactStars
               count={5}
               size={24}
-              value="3"
+              value={3}
               edit={false}
               activeColor="#ffd700"
             />
@@ -58,15 +57,15 @@ const ProductCard = (props) => {
           </div>
           <div className="action-bar position-absolute">
             <div className="d-flex flex-column gap-15">
-              <Link>
-                <img src="images/prodcompare.svg" alt="compare" />
-              </Link>
-              <Link>
-                <img src="images/view.svg" alt="view" />
-              </Link>
-              <Link>
-                <img src="images/add-cart.svg" alt="addcart" />
-              </Link>
+              <button className="border-0 bg-transparent">
+                <img src={prodcompare} alt="prodcompare" />
+              </button>
+              <button className="border-0 bg-transparent">
+                <img src={view} alt="view" />
+              </button>
+              <button className="border-0 bg-transparent">
+                <img src={addcart} alt="addcart" />
+              </button>
             </div>
           </div>
         </Link>
@@ -78,13 +77,13 @@ const ProductCard = (props) => {
       >
         <Link className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
-            <Link>
+            <button className="border-0 bg-transparent">
               <img
-                src={wishlist}
+                src={wish1}
                 alt="wishlist"
                 style={{ width: "18px", height: "18px" }}
               />
-            </Link>
+            </button>
           </div>
           <div className="product-image">
             <img src={watch} className="img-fluid" alt="product image" />
@@ -98,7 +97,7 @@ const ProductCard = (props) => {
             <ReactStars
               count={5}
               size={24}
-              value="3"
+              value={3}
               edit={false}
               activeColor="#ffd700"
             />
@@ -113,15 +112,15 @@ const ProductCard = (props) => {
           </div>
           <div className="action-bar position-absolute">
             <div className="d-flex flex-column gap-15">
-              <Link>
+              <button className="border-0 bg-transparent">
                 <img src={prodcompare} alt="compare" />
-              </Link>
-              <Link>
+              </button>
+              <button className="border-0 bg-transparent">
                 <img src={view} alt="view" />
-              </Link>
-              <Link>
+              </button>
+              <button className="border-0 bg-transparent">
                 <img src={addcart} alt="addcart" />
-              </Link>
+              </button>
             </div>
           </div>
         </Link>
