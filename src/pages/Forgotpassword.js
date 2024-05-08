@@ -3,6 +3,7 @@ import Meta from "../components/Meta";
 import BreadCrumb from "../components/BreadCrumb";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
+import CustomInput from "../components/CustomInput";
 
 const Forgotpassword = () => {
   return (
@@ -15,20 +16,13 @@ const Forgotpassword = () => {
             <div className="auth-card">
               <h3 className="text-center mb-3">Reset Your Password</h3>
               <p className="text-center my-2 mt-2 text-danger">
-                "Please check your email for the password reset link."
+                "We will send a reset link to your email address."
               </p>
               <form action="" className="d-flex flex-column gap-15">
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className="form-control"
-                  />
-                </div>
+                <CustomInput type="email" name="email" placeholder="Email" />
                 <div>
                   <div className="mt-3 d-flex flex-column gap-15 justify-align-content-center align-items-center">
-                    <button className="button border-0 py-2 px-3" type="submit">
+                    <button className="button py-2 px-3" type="submit">
                       Submit
                     </button>
                     <Link to="/login">Cancel</Link>
